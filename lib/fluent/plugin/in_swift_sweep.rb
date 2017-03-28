@@ -82,7 +82,7 @@ module Fluent
       while @processing
         Dir.glob(@file_path_with_glob).map do |filename|
           File.open(filename) do |file|
-            @storage.put_object('jer_ironman_cfuse', filename, file)
+            @storage.put_object(@swift_container, filename, file)
             log.info "File #{filename} sent to swift"
             FileUtils.rm(filename)
             log.info "File #{filename} deleted"
