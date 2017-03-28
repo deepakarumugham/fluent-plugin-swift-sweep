@@ -65,7 +65,6 @@ module Fluent
                         :openstack_username => @auth_user,
                         :openstack_tenant => @auth_tenant,
                         :openstack_api_key  => @auth_api_key
-      @storage.change_account @swift_account if @swift_account
 
       check_container
       
