@@ -2,6 +2,6 @@
 
 Enhancements:
 
-* Initial (debug log)
+* Initial check-in(debug log)
 
 

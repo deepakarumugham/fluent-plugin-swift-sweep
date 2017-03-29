@@ -8,25 +8,14 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Deepak Arumugham"]
   spec.email         = ["deepak.arumugham@gmail.com"]
 
-  spec.summary       = %q{Fluentd plugin to cat files and move them.}
+  spec.summary       = %q{Fluentd plugin to move local files to Swift Object storage.}
   spec.description   = spec.summary
   spec.homepage      = "https://github.com/deepakarumugham/fluent-plugin-swift-sweep"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split("\n")
-  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  spec.files         = `find .`.split("\n")
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "fluentd", "~> 0.12.0"
   spec.add_dependency "fog", "~> 1.15.0"
-  spec.add_dependency "yajl-ruby", "~> 1.0"
-  spec.add_dependency "fluent-mixin-config-placeholders", "~> 0.2.0"
-  spec.add_development_dependency "rake", ">= 0.9.2"
-  spec.add_development_dependency "flexmock", ">= 1.2.0"
-  spec.add_development_dependency "bundler"
-  spec.add_development_dependency "test-unit"
-  spec.add_development_dependency "test-unit-rr"
-  spec.add_development_dependency "pry"
-  spec.add_development_dependency "pry-nav"
 end

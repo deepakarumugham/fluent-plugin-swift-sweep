@@ -27,13 +27,16 @@ tmp/test
 ```
 
 
+This plugin watches the directory (`file_path_with_glob tmp/test/*.log`). 
+And reads the file and sends it to swift object storage. Finally removes the file, after sending it to swift.
 
-This plugin watches the directory (`file_path_with_glob tmp/test/*.log`), and reads the contents and sends the files to swift storage and removes the file, after sending them to swift.
+The files after getting moved to swift container:
+```
+├── tmp/test/core.files1.log
+├── tmp/test/core.files2.log
+├── tmp/test/core.files3.log
 
-The files will be moved to swift container as:
-tmp/test/core.files1.log
-tmp/test/core.files2.log
-tmp/test/core.files3.log
+```
 
 ## Configuration
 

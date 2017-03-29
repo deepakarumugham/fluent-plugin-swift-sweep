@@ -1,14 +1,10 @@
 module Fluent
   class SwiftSweepInput < Input
     Plugin.register_input('swift_sweep', self)
-    $file_array = []
     
     def initialize
       super
       require 'fog'
-      require 'zlib'
-      require 'time'
-      require 'tempfile'
       require 'open3'
     end
 
